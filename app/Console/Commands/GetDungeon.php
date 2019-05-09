@@ -41,8 +41,8 @@ class GetDungeon extends Command
     {
         $token = Dungeon::generateToken();
 
-        $bosses = Dungeon::getBosses();
-        $boss = Dungeon::getBoss($bosses);
-        $this->line(json_encode($boss));
+        // $bosses = Dungeon::getBosses();
+        // $boss = Dungeon::getBoss($bosses);
+        $this->line(json_encode($token));
     }
 }

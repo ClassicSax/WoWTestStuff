@@ -40,7 +40,6 @@ class Dungeon
     public static function generateToken()
     {
         $token = false;
-
         try {
             $payload = [
                 'client_id' => env('CLIENT_ID'),
@@ -69,16 +68,19 @@ class Dungeon
 
     public static function getBoss($bosses)
     {
+        $all_bosses = array();
 
         foreach ($bosses as $boss) {
             $arr = array(
-                'bosses' => array(
-                    'id' => $boss->id,
-                    'Name' => $boss->name,
-                    'Location' => $boss->zoneId,
-                    )
-                );
+            'id' => $boss->id,
+            'Name' => $boss->name,
+            'Location' => $boss->zoneId,
+            'Description' => isset($boss->description) ? $boss->description : null
+        );
+
+            array_push($all_bosses, $arr);
         }
-        return $arr;
+
+        return $all_bosses;
     }
 }
