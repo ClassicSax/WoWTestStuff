@@ -8,7 +8,7 @@
     <ul>
         @foreach($zones as $zone)
             <li>
-                <a href="/zone/{{ $zone->id }}">
+                <a href="/index/{{ $zone->id }}">
                     <ul>
                         {{ $zone->name }}
                     </ul>

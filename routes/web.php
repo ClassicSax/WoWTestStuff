@@ -14,5 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('zone', 'ZoneController');
+
+
+Route::resource('index', 'IndexController');
 

@@ -11,7 +11,6 @@ use App\Helpers\Zones;
 //Model
 use App\Boss;
 
-
 class UpdateBosses extends Command
 {
     /**
@@ -56,6 +55,5 @@ class UpdateBosses extends Command
                 'description' => isset($boss->description) ? $boss->description : null
             ]);
         }
-
     }
 }
